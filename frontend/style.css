@@ -1,0 +1,883 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(14, 165, 233, 0.10), transparent 28%),
+        #f5f7fb;
+
+    color: #172033;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    background:
+        linear-gradient(135deg, #111827, #1e293b 55%, #312e81);
+
+    color: white;
+    padding: 55px 7% 70px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.header::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.18);
+
+    top: -150px;
+    right: 8%;
+}
+
+
+.header::after {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(14, 165, 233, 0.12);
+
+    bottom: -100px;
+    left: 20%;
+}
+
+
+.header-content {
+    max-width: 1250px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.brand-small {
+    color: #a5b4fc;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+
+.header h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 18px;
+}
+
+
+.header-subtitle {
+    color: #cbd5e1;
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+
+.header-icon {
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    transform: rotate(5deg);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.container {
+    max-width: 1250px;
+    margin: -35px auto 0;
+
+    padding: 0 25px 70px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ================================
+   INTRO
+================================ */
+
+.intro {
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid rgba(226, 232, 240, 0.9);
+
+    border-radius: 24px;
+
+    padding: 28px 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.section-label {
+    color: #6366f1;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.intro h2 {
+    font-size: 27px;
+    margin-bottom: 7px;
+
+    color: #111827;
+}
+
+
+.intro p:last-child {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+.workshop-count {
+    min-width: 100px;
+
+    text-align: center;
+
+    padding: 15px 20px;
+
+    border-radius: 18px;
+
+    background: #eef2ff;
+
+    border: 1px solid #e0e7ff;
+}
+
+
+.workshop-count span {
+    display: block;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    color: #4f46e5;
+}
+
+
+.workshop-count small {
+    color: #6366f1;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   FILTER BOX
+================================ */
+
+.filter-box {
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.07);
+
+    margin-bottom: 35px;
+}
+
+
+.filter-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.filter-heading h3 {
+    font-size: 20px;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+
+.filter-heading p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+.clear-btn {
+    border: none;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    padding: 11px 18px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.clear-btn:hover {
+    background: #e2e8f0;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   FILTERS
+================================ */
+
+.filters {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.filter-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #475569;
+
+    margin-bottom: 8px;
+}
+
+
+.search-wrapper {
+    position: relative;
+}
+
+
+.search-wrapper span {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 15px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #dbe1ea;
+
+    background: #f8fafc;
+
+    border-radius: 13px;
+
+    padding: 0 14px;
+
+    outline: none;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.25s;
+}
+
+
+.search-wrapper input {
+    padding-left: 42px;
+}
+
+
+input:focus,
+select:focus {
+    background: white;
+
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.10);
+}
+
+
+/* ================================
+   WORKSHOP GRID
+================================ */
+
+.workshop-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ================================
+   WORKSHOP CARD
+================================ */
+
+.workshop-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    animation: cardAppear 0.45s ease both;
+}
+
+
+.workshop-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6,
+        #06b6d4
+    );
+}
+
+
+.workshop-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #c7d2fe;
+
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   CARD TOP
+================================ */
+
+.card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.category-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 7px 10px;
+
+    border-radius: 9px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+
+.level-badge {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    padding: 7px 10px;
+
+    border-radius: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+.level-badge.beginner {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+
+.level-badge.intermediate {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+
+.level-badge.advanced {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.workshop-card h3 {
+    font-size: 20px;
+
+    color: #111827;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+}
+
+
+.description {
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: 45px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ================================
+   CARD DETAILS
+================================ */
+
+.card-details {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eef2f7;
+
+    padding-top: 17px;
+
+    gap: 10px;
+}
+
+
+.detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.detail-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+
+.detail-text span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+.detail-text strong {
+    display: block;
+
+    color: #334155;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* ================================
+   LOADING
+================================ */
+
+.loading {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #6366f1;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.loading::before {
+    content: "◌";
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.error-message {
+    display: none;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   NO RESULTS
+================================ */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+.no-results-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.no-results h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.no-results p {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+.footer p {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.footer span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .workshop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 40px 25px 65px;
+    }
+
+    .header-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    .header h1 {
+        font-size: 45px;
+    }
+
+    .intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .workshop-count {
+        width: 100%;
+    }
+
+    .filter-box {
+        padding: 22px;
+    }
+
+    .filter-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .clear-btn {
+        width: 100%;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header h1 {
+        font-size: 38px;
+    }
+
+    .workshop-card {
+        padding: 20px;
+    }
+
+}
